@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using RpgCreator.DomainModel.Abstract;
 
-namespace RpgCreator.DomainModel.Concrete
+namespace RpgCreator.DomainModel.Relations
 {
-    class NPC : Base<NPC>
+    class ManyToManyRelation<T, K>
+        where T : Base<T>
+        where K : Base<K>
     {
     }
 }

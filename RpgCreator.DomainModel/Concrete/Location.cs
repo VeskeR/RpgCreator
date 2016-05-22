@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgCreator.DomainModel.Abstract;
 
 namespace RpgCreator.DomainModel.Concrete
 {
-    class Location
+    class Location : Base<Location>
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }

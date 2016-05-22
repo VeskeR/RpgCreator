@@ -41,11 +41,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\Base.cs" />
+    <Compile Include="Concrete\Character.cs" />
+    <Compile Include="Concrete\CreatureType.cs" />
+    <Compile Include="Concrete\Enemy.cs" />
+    <Compile Include="Concrete\Game.cs" />
+    <Compile Include="Concrete\Item.cs" />
+    <Compile Include="Concrete\ItemType.cs" />
+    <Compile Include="Concrete\Location.cs" />
+    <Compile Include="Concrete\NPC.cs" />
+    <Compile Include="Concrete\Skill.cs" />
+    <Compile Include="Concrete\SkillType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RpgCreator.DomainModel.Abstract;
 
-namespace RpgCreator.DomainModel.Concrete
+namespace RpgCreator.DomainModel.Abstract
 {
-    class NPC : Base<NPC>
+    class ManyToManyResolver<T, K>
+        where T : Base<T>
+        where K : Base<K>
     {
     }
 }

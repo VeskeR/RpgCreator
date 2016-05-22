@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RpgCreator.DomainModel.Abstract;
 
 namespace RpgCreator.DomainModel.Concrete
 {
-    class Game
+    class Game : Base<Game>
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Author { get; set; }
     }
 }

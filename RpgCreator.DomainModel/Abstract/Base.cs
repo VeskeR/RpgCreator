@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace RpgCreator.DomainModel.Abstract
 {
-	class Base<T> where T : Base<T>
+	abstract class Base<T> where T : Base<T>
 	{
 		public Guid Id { get; }
 
-		public Base()
+	    protected Base()
 		{
 			Id = Guid.NewGuid();
 		}

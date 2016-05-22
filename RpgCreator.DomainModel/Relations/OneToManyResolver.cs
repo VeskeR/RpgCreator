@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using RpgCreator.DomainModel.Abstract;
 
-namespace RpgCreator.DomainModel.Concrete
+namespace RpgCreator.DomainModel.Relations
 {
-    class NPC : Base<NPC>
+    class OneToManyResolver<TOne, TMany>
+        where TOne : Base<TOne>
+        where TMany : Base<TMany>
     {
     }
 }
