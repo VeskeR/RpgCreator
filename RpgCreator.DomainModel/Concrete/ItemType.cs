@@ -7,7 +7,7 @@ using RpgCreator.DomainModel.Abstract;
 
 namespace RpgCreator.DomainModel.Concrete
 {
-    class ItemType : Base<ItemType>
+    class ItemType : EntityBase<ItemType>
     {
     }
 }
