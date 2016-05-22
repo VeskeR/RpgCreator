@@ -12,6 +12,9 @@ namespace RpgCreator.DomainModel.Concrete
     [DataContract]
     class Enemy : EntityBase<Enemy>
     {
+        [DataMember(Name = "CreatureTypeId")]
+        private Guid _creatureTypeId;
+
         [DataMember]
         public string Name { get; set; }
         [DataMember]
@@ -20,15 +23,23 @@ namespace RpgCreator.DomainModel.Concrete
         public int Health { get; set; }
 
         [IgnoreDataMember]
+        public CreatureType CreatureType => CreatureType.Items[_creatureTypeId];
+        [IgnoreDataMember]
         public List<Location> Locations => EnemyLocation.Items.Values.Where(ei => ei.Enemy == this).Select(ei => ei.Location).ToList();
         [IgnoreDataMember]
         public List<Item> EnemyItems => EnemyItem.Items.Values.Where(ei => ei.Enemy == this).Select(ei => ei.Item).ToList();
 
-        public Enemy(string name, string description, int health)
+        public Enemy(string name, string description, int health, CreatureType creatureType)
+            :this(name, description, health, creatureType.Id)
+        {
+
+        }
+        public Enemy(string name, string description, int health, Guid creatureTypeId)
         {
             Name = name;
             Description = description;
             Health = health;
+            _creatureTypeId = creatureTypeId;
         }
     }
 }
