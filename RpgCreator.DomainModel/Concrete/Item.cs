@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using RpgCreator.DomainModel.Abstract;
+using RpgCreator.DomainModel.Relations;
 
 namespace RpgCreator.DomainModel.Concrete
 {
@@ -23,6 +24,8 @@ namespace RpgCreator.DomainModel.Concrete
 
         [IgnoreDataMember]
         public ItemType ItemType => ItemType.Items[_itemTypeId];
+        [IgnoreDataMember]
+        public List<Enemy> Enemies => EnemyItem.Items.Values.Where(ei => ei.Item == this).Select(ei => ei.Enemy).ToList();
 
         public Item(string name, string description, int value, ItemType itemType)
             :this(name, description, value, itemType.Id)
