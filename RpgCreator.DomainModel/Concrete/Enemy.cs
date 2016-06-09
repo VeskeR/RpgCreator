@@ -10,7 +10,7 @@ using RpgCreator.DomainModel.Relations;
 namespace RpgCreator.DomainModel.Concrete
 {
     [DataContract]
-    class Enemy : EntityBase<Enemy>
+    public class Enemy : EntityBase<Enemy>
     {
         [DataMember(Name = "CreatureTypeId")]
         private Guid _creatureTypeId;
@@ -28,6 +28,8 @@ namespace RpgCreator.DomainModel.Concrete
         public List<Location> Locations => EnemyLocation.Items.Values.Where(ei => ei.Enemy == this).Select(ei => ei.Location).ToList();
         [IgnoreDataMember]
         public List<Item> EnemyItems => EnemyItem.Items.Values.Where(ei => ei.Enemy == this).Select(ei => ei.Item).ToList();
+        [IgnoreDataMember]
+        public List<Skill> EnemySkills => EnemySkill.Items.Values.Where(ei => ei.Enemy == this).Select(ei => ei.Skill).ToList();
 
         public Enemy(string name, string description, int health, CreatureType creatureType)
             :this(name, description, health, creatureType.Id)

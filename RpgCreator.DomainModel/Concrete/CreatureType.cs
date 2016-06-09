@@ -9,7 +9,7 @@ using RpgCreator.DomainModel.Abstract;
 namespace RpgCreator.DomainModel.Concrete
 {
     [DataContract]
-    class CreatureType : EntityBase<CreatureType>
+    public class CreatureType : EntityBase<CreatureType>
     {
         [DataMember]
         public string Name { get; set; }

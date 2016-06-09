@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RpgCreator.Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="RPG Creator" Height="421.38" Width="772.37"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="308*"/>
+        </Grid.RowDefinitions>
+        <Frame NavigationUIVisibility="Hidden" x:Name="Frame" Source="Views/Game.xaml" Grid.Row="1"/>
+        <Menu x:Name="menu" Grid.Row="0" Margin="0">
+            <MenuItem Header="_File" Height="25" Width="100">
+                <MenuItem Header="_View">
+                    <MenuItem Name="ViewGameMI" Header="Game" Click="ViewGameMI_Click"></MenuItem>
+                    <MenuItem Name="ViewLocationMI" Header="Location" Click="ViewLocationMI_Click"></MenuItem>
+                    <MenuItem Name="ViewCharacterMI" Header="Character" Click="ViewCharacterMI_Click"></MenuItem>
+                    <MenuItem Name="ViewEnemyMI" Header="Enemy" Click="ViewEnemyMI_Click"></MenuItem>
+                    <MenuItem Name="ViewNPCMI" Header="NPC" Click="ViewNPCMI_Click"></MenuItem>
+                    <MenuItem Name="ViewCreatureTypeMI" Header="CreatureType" Click="ViewCreatureTypeMI_Click"></MenuItem>
+                    <MenuItem Name="ViewItemMI" Header="Item" Click="ViewItemMI_Click"></MenuItem>
+                    <MenuItem Name="ViewSkillMI" Header="Skill" Click="ViewSkillMI_Click"></MenuItem>
+                    <MenuItem Name="ViewItemTypeMI" Header="ItemType" Click="ViewItemTypeMI_Click"></MenuItem>
+                    <MenuItem Name="ViewSkillTypeMI" Header="SkillType" Click="ViewSkillTypeMI_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="_Create">
+                    <MenuItem Name="CreateGameMI" Header="Game" Click="CreateGameMI_Click"></MenuItem>
+                    <MenuItem Name="CreateLocationMI" Header="Location" Click="CreateLocationMI_Click"></MenuItem>
+                    <MenuItem Name="CreateCharacterMI" Header="Character" Click="CreateCharacterMI_Click"></MenuItem>
+                    <MenuItem Name="CreateEnemyMI" Header="Enemy" Click="CreateEnemyMI_Click"></MenuItem>
+                    <MenuItem Name="CreateNPCMI" Header="NPC" Click="CreateNPCMI_Click"></MenuItem>
+                    <MenuItem Name="CreateCreatureTypeMI" Header="CreatureType" Click="CreateCreatureTypeMI_Click"></MenuItem>
+                    <MenuItem Name="CreateItemMI" Header="Item" Click="CreateItemMI_Click"></MenuItem>
+                    <MenuItem Name="CreateSkillMI" Header="Skill" Click="CreateSkillMI_Click"></MenuItem>
+                    <MenuItem Name="CreateItemTypeMI" Header="ItemType" Click="CreateItemTypeMI_Click"></MenuItem>
+                    <MenuItem Name="CreateSkillTypeMI" Header="SkillType" Click="CreateSkillTypeMI_Click"></MenuItem>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help" Height="25" Width="100">
+                <MenuItem Name="AboutMI" Header="About" Click="AboutMI_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>

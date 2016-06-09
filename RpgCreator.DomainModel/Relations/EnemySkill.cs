@@ -8,23 +8,23 @@ using RpgCreator.DomainModel.Concrete;
 
 namespace RpgCreator.DomainModel.Relations
 {
-    public class EnemyItem : EntityBase<EnemyItem>
+    public class EnemySkill : EntityBase<EnemySkill>
     {
         private Guid _enemyId;
-        private Guid _itemId;
+        private Guid _skillId;
 
         public Enemy Enemy => Enemy.Items[_enemyId];
-        public Item Item => Item.Items[_itemId];
+        public Skill Skill => Skill.Items[_skillId];
 
-        public EnemyItem(Enemy enemy, Item item)
-            : this(enemy.Id, item.Id)
+        public EnemySkill(Enemy enemy, Skill skill)
+            : this(enemy.Id, skill.Id)
         {
 
         }
-        public EnemyItem(Guid enemyId, Guid itemId)
+        public EnemySkill(Guid enemyId, Guid skillId)
         {
             _enemyId = enemyId;
-            _itemId = itemId;
+            _skillId = skillId;
         }
     }
 }

@@ -8,7 +8,7 @@ using RpgCreator.DomainModel.Concrete;
 
 namespace RpgCreator.DomainModel.Relations
 {
-    class EnemyLocation : EntityBase<EnemyLocation>
+    public class EnemyLocation : EntityBase<EnemyLocation>
     {
         private Guid _enemyId;
         private Guid _locationId;

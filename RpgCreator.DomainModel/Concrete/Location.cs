@@ -10,7 +10,7 @@ using RpgCreator.DomainModel.Relations;
 namespace RpgCreator.DomainModel.Concrete
 {
     [DataContract]
-    class Location : EntityBase<Location>
+    public class Location : EntityBase<Location>
     {
         [DataMember(Name = "GameId")]
         private Guid _gameId;

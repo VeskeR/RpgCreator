@@ -1,0 +1,28 @@
+﻿<Window x:Class="RpgCreator.Client.Views.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RpgCreator.Client.Views"
+        mc:Ignorable="d"
+        Title="About" Height="212.03" Width="411.654"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="0">
+        <RichTextBox x:Name="RichTextBox" Margin="10">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RPG Creator 1.0.0"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="Build on Visual Studio 2015, .NET Framework 4.5"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="This software allows you to create own RPG world and content, organise them in nice easy-access way. This software can be used as planning for future games as well as for real-world RPG games."/>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="© 2016 ADNREY BULAT ALL RIGHTS RESERVED"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>

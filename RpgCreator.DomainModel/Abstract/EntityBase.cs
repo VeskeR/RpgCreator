@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RpgCreator.DomainModel.Abstract
 {
-	abstract class EntityBase<T> where T : EntityBase<T>
+	public abstract class EntityBase<T> where T : EntityBase<T>
 	{
         [IgnoreDataMember]
         public static readonly Dictionary<Guid, T> Items = new Dictionary<Guid, T>();
